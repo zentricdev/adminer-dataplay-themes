@@ -1,84 +1,74 @@
 # Adminer DataPlay Themes
 
-Una colección de temas CSS minimalistas para Adminer personalizables mediante
-variables predefinidas.
+A collection of minimalist Adminer themes, easily customizable via CSS variables.
 
-Usa un tema predefinido o ajusta color y fuentes a tus gustos personales.
+Choose from our predefined themes or tweak the colors and typography to match your personal style.
 
-## Archivo principal: `adminer.css`
+## Main File: `adminer.css`
 
-Este es el archivo principal que configura la interfaz de Adminer  con las
-siguientes características configurables:
+The core configuration file for the Adminer interface. It includes the following features:
 
-### Selecciona tu tema de color preferido
+### Select Your Color Theme
 
-Todos los temas disponibles:
+Available themes:
 
-| Tema                  | Archivo                                  |
+| Theme                 | File path                                |
 | --------------------- | ---------------------------------------- |
-| Cream (light)         | `themes/assets/theme-cream.css`          |
-| Let It Snow (light)   | `themes/assets/theme-let-it-snow.css`    |
-| Black is Black (dark) | `themes/assets/theme-black-is-black.css` |
-| Purple Rain (dark)    | `themes/assets/theme-purple-rain.css`    |
+| Cream (Light)         | `themes/assets/theme-cream.css`          |
+| Let It Snow (Light)   | `themes/assets/theme-let-it-snow.css`    |
+| Black is Black (Dark) | `themes/assets/theme-black-is-black.css` |
+| Purple Rain (Dark)    | `themes/assets/theme-purple-rain.css`    |
 
-Para cambiar el tema activo, edita el archivo `themes/adminer.css` y descomenta
-el `@import` según tu preferencia, luego recarga la página
+To switch themes, edit `themes/adminer.css`, uncomment the `@import` line for your preferred style, and refresh your browser.
 
-### Configura las fuentes tipográficas
+### Typography & Fonts
 
-Para usar otras fuentes tipográficas, edita `themes/assets/fonts.css` y carga
-fuentes de Google Fonts u otro proveedor, luego, configura las **variables CSS:**
+To customize fonts, edit `themes/assets/fonts.css`. You can load fonts from Google Fonts or any other provider by configuring these **CSS variables**:
 
-| Variable                          | Uso                                               |
-| --------------------------------- | ------------------------------------------------- |
-| `--theme-font-primary`            | Tipografía general de la interfaz                 |
-| `--theme-font-size-primary`       | Tamaño por defecto                                |
-| `--theme-datatable-font`          | Tipografía para datos en tablas  (inherit u otra) |
-| `--theme-datatable-font-size`     | Tamaño por defecto (inherit u otro)               |
-| `--theme-datatable-white-space`   | Configura white-space en tablas                   |
-| `--theme-datatable-overflow-wrap` | Configura overflow-wrap en tablas                 |
+| Variable                          | Description                             |
+| --------------------------------- | --------------------------------------- |
+| `--theme-font-primary`            | Primary UI typeface                     |
+| `--theme-font-size-primary`       | Default font size                       |
+| `--theme-datatable-font`          | Data table typeface (inherit or custom) |
+| `--theme-datatable-font-size`     | Data table font size                    |
+| `--theme-datatable-white-space`   | Controls text wrapping in tables        |
+| `--theme-datatable-overflow-wrap` | Controls overflow behavior in tables    |
 
+> **Tip:** You can set a specific font (e.g., monospace) for table data or use `inherit` to keep the primary UI font.
+>
+> By default, Adminer applies `white-space: pre;` to data cells, which often makes rows excessively long and forces horizontal scrolling. Use the last two variables to adjust this behavior (see screenshots for examples).
 
-Puedes establecer una fuente específica, por ejemplo monospace, para los datos
-mostrados en las tablas o bien dejar `inherit` para usar la fuente primaria.
-Por defecto Adminer aplica un estilo de `white-space` de tipo `pre` a las celdas
-de datos que, a veces, dificulta la legibilidad al hacer que las filas sean
-demasiado largas y salgan de la pantalla. Las dos últimas flags sirven
-para modificar ese comportamiento (ver capturas de pantalla).
+---
 
-## Inicio rápido con Docker
+## Quick Start with Docker
 
-Si tienes Docker puedes usar las siguientes instrucciones definidas en el
-`Makefile`.
-
+If you have Docker installed, you can manage the environment using the provided `Makefile`.
 
 ```bash
-# Iniciar Adminer con Docker
+# Start Adminer with Docker
 make up
 
-# Detener servicios
+# Stop services
 make down
 
-# Reiniciar servicios
+# Restart services
 make restart
 
-# Reconstruir todo - OJO: elimina volúmenes de bases de datos
+# Rebuild everything (WARNING: This deletes database volumes)
 make rebuild
 ```
 
-Al iniciar con `make up`, **Adminer** estará disponible en `http://localhost:8080`
-y habrá dos bases de datos `acme` disponibles, una en MySQL y otra para
-PostgreSQL, con un par de tablas con datos de prueba.
+When starting with `make up`, **Adminer** will be available at `http://localhost:8080`. The setup includes two `acme` databases (MySQL and PostgreSQL) pre-loaded with sample tables and test data.
 
-Para acceder, en el formulario de login:
+To log in, use the following credentials in the login form:
 
-- **system**: `MySQL/MariaDB` | `PostgreSQL`
-- **server**: `mysql` | `pgsql` (contenedores docker)
-- **username**: `root`
-- **password**: `root`
-- **database**: `acme` (o dejar en blanco y seleccionar luego)
+- **System**: `MySQL/MariaDB` | `PostgreSQL`
+- **Server**: `mysql` | `pgsql` (Docker containers)
+- **Username**: `root`
+- **Password**: `root`
+- **Database**: `acme` (or leave blank to select it later)
 
-## Estructura de carpetas
+## Folders Structure
 
 ```
 .
@@ -97,7 +87,7 @@ Para acceder, en el formulario de login:
 └── Makefile
 ```
 
-## Galería
+## Gallery
 
 ### Black is Black
 
