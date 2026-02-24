@@ -14,9 +14,9 @@
     --theme-font-primary: Saira, sans-serif;
     --theme-font-size-primary: medium;
 
-    /* specific datatable font: if not required, comment or set as "inherit" */
+    /* specific datatable font & size: if not required, comment or set as "inherit" */
     --theme-datatable-font: 'Nova Mono', monospace;
-    --theme-datatable-font-size: inherit;
+    --theme-datatable-font-size: 90%;
 
     /* white-space and overflow config */
     --theme-datatable-white-space: normal;
