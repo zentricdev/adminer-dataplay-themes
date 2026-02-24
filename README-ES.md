@@ -1,13 +1,13 @@
 # Adminer DataPlay Themes
 
-Una colección de temas CSS minimalistas para Adminer, fácilmente personalizables mediante variables CSS.
+Una colección de temas CSS minimalistas para **Adminer**, fácilmente personalizables mediante variables CSS.
 
 Escoge uno de los temas predefinidos o ajusta color y fuentes a tu estilo
 personal.
 
 ## Archivo principal: `adminer.css`
 
-Este es el archivo principal que configura la interfaz de Adminer  con las
+Este es el archivo principal que configura la interfaz de **Adminer**  con las
 siguientes características:
 
 ### Selecciona tu tema de color preferido
@@ -39,17 +39,10 @@ descomenta alguna de las propuestas o carga otras de Google Fonts u otro proveed
 | `--theme-datatable-overflow-wrap` | Configura overflow-wrap en tablas                 |
 
 
-Puedes establecer una fuente específica, por ejemplo monospace, para los datos
-mostrados en las tablas o bien dejar `inherit` para usar la fuente primaria.
-Por defecto Adminer aplica un estilo de `white-space` de tipo `pre` a las celdas
-de datos que, a veces, dificulta la legibilidad al hacer que las filas sean
-demasiado largas y salgan de la pantalla. Las dos últimas flags sirven
-para modificar ese comportamiento (ver capturas de pantalla).
-
 > **NOTA:** Puedes establecer una fuente específica (e.g., monospace) para las
 > tablas de datos o usar `inherit` para mantener la fuente primaria.
 >
-> Por defectto, Adminer aplica `white-space: pre;` a las celdas de datos, lo
+> Por defectto, **Adminer** aplica `white-space: pre;` a las celdas de datos, lo
 > que con frecuencia hace las filas demasiado largas forzando el scroll
 > horizontal. Usa las dos últimas variables para ajustar este comportamiento
 > (ver capturas de pantalla).

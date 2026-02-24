@@ -1,12 +1,12 @@
 # Adminer DataPlay Themes
 
-A collection of minimalist Adminer themes, easily customizable via CSS variables.
+A collection of minimalist **Adminer** themes, easily customizable via CSS variables.
 
 Choose from our predefined themes or tweak the colors and typography to match your personal style.
 
 ## Main File: `adminer.css`
 
-The core configuration file for the Adminer interface. It includes the following features:
+The core configuration file for the **Adminer** interface. It includes the following features:
 
 ### Select Your Color Theme
 
@@ -36,7 +36,7 @@ To customize fonts, edit `themes/assets/fonts.css`. You can load fonts from Goog
 
 > **Tip:** You can set a specific font (e.g., monospace) for table data or use `inherit` to keep the primary UI font.
 >
-> By default, Adminer applies `white-space: pre;` to data cells, which often makes rows excessively long and forces horizontal scrolling. Use the last two variables to adjust this behavior (see screenshots for examples).
+> By default, **Adminer** applies `white-space: pre;` to data cells, which often makes rows excessively long and forces horizontal scrolling. Use the last two variables to adjust this behavior (see screenshots for examples).
 
 ---
 
