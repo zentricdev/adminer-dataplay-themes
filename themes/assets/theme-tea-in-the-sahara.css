@@ -1,3 +1,5 @@
+/* Beneath the sheltering sky */
+
 :root {
     --theme-bg-primary: floralwhite;
     --theme-text-primary: #333;
@@ -14,18 +16,4 @@
     --text-color: orangered;
     --identifier-color: fuchsia;
     --number-color: green;
-
-    /* --text-color: orangered;
-    --bg-color: #fff;
-    --php-color: #003;
-    --string-color: lime;
-    --string-plain-color: lime;
-    --keyword-color: aqua;
-    --value-color: purple;
-    --number-color: limegreen;
-    --attribute-color: teal;
-    --js-bg-color: #f0f0ff;
-    --css-bg-color: #ffffe0;
-    --php-bg-color: #fff0f0;
-    --php-sql-bg-color: #ffbbb0; */
 }

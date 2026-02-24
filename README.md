@@ -12,12 +12,12 @@ The core configuration file for the **Adminer** interface. It includes the follo
 
 Available themes:
 
-| Theme                 | File path                                |
-| --------------------- | ---------------------------------------- |
-| Cream (Light)         | `themes/assets/theme-cream.css`          |
-| Let It Snow (Light)   | `themes/assets/theme-let-it-snow.css`    |
-| Black is Black (Dark) | `themes/assets/theme-black-is-black.css` |
-| Purple Rain (Dark)    | `themes/assets/theme-purple-rain.css`    |
+| Theme                     | File path                                   |
+| ------------------------- | ------------------------------------------- |
+| Black is Black (Dark)     | `themes/assets/theme-black-is-black.css`    |
+| Let It Snow (Light)       | `themes/assets/theme-let-it-snow.css`       |
+| Purple Rain (Dark)        | `themes/assets/theme-purple-rain.css`       |
+| Tea In The Sahara (Light) | `themes/assets/theme-tea-in-the-sahara.css` |
 
 To switch themes, edit `themes/adminer.css`, uncomment the `@import` line for your preferred style, and refresh your browser.
 
@@ -77,9 +77,9 @@ To log in, use the following credentials in the login form:
 │   └── assets/
 │       ├── fonts.css
 │       ├── theme-black-is-black.css
-│       ├── theme-cream.css
 │       ├── theme-let-it-snow.css
-│       └── theme-purple-rain.css
+│       ├── theme-purple-rain.css
+│       └── theme-tea-in-the-sahara.css
 ├── init/
 │   ├── mysql-setup.sql
 │   └── pgsql-setup.sql
@@ -97,13 +97,13 @@ To log in, use the following credentials in the login form:
 ![Alter Table](schreenshots/black-is-black-alter-table.png)
 ![New Item](schreenshots/black-is-black-new-item.png)
 
-### Cream
+### Let It Snow
 
-![Login](schreenshots/cream-login.png)
-![Datatable](schreenshots/cream-datatable.png)
-![Show Structure](schreenshots/cream-show-structure.png)
-![Alter Table](schreenshots/cream-alter-table.png)
-![New Item](schreenshots/cream-new-item.png)
+![Login](schreenshots/let-it-snow-login.png)
+![Snow Patrol Datatable](schreenshots/let-it-snow-datatable.png)
+![Show Structure](schreenshots/let-it-snow-show-structure.png)
+![Alter Table](schreenshots/let-it-snow-alter-table.png)
+![New Item](schreenshots/let-it-snow-new-item.png)
 
 ### Purple Rain
 
@@ -113,10 +113,10 @@ To log in, use the following credentials in the login form:
 ![Alter Table](schreenshots/purple-rain-alter-table.png)
 ![New Item](schreenshots/purple-rain-new-item.png)
 
-### Let It Snow
+### Tea In The Sahara
 
-![Login](schreenshots/let-it-snow-login.png)
-![Snow Patrol Datatable](schreenshots/let-it-snow-datatable.png)
-![Show Structure](schreenshots/let-it-snow-show-structure.png)
-![Alter Table](schreenshots/let-it-snow-alter-table.png)
-![New Item](schreenshots/let-it-snow-new-item.png)
+![Login](schreenshots/tea-in-the-sahara-login.png)
+![Datatable](schreenshots/tea-in-the-sahara-datatable.png)
+![Show Structure](schreenshots/tea-in-the-sahara-show-structure.png)
+![Alter Table](schreenshots/tea-in-the-sahara-alter-table.png)
+![New Item](schreenshots/tea-in-the-sahara-new-item.png)

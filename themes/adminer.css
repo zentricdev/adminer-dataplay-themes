@@ -2,10 +2,10 @@
 @import url('./assets/theme-fonts.css');
 
 /* uncomment your favorite theme */
-@import url('./assets/theme-black-is-black.css');
-/* @import url('./assets/theme-cream.css'); */
+/* @import url('./assets/theme-black-is-black.css'); */
 /* @import url('./assets/theme-let-it-snow.css'); */
 /* @import url('./assets/theme-purple-rain.css'); */
+@import url('./assets/theme-tea-in-the-sahara.css');
 
 
 /* mini reset & common */
@@ -200,7 +200,12 @@ select {
 input:not(.icon),
 select,
 textarea {
-    background: var(--theme-bg-secondary);
+    background-color: var(--theme-bg-secondary);
+    color: var(--theme-text-primary);
+}
+textarea {
+    font-family: var( --theme-datatable-font);
+    font-size: var(--theme-datatable-font-size);
 }
 
 input:not(.icon):focus,

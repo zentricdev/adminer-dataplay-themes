@@ -1,7 +1,5 @@
 .PHONY: up down restart rebuild
 
-COMPOSE_PROJECT_NAME=dataplay
-
 up:
 	docker compose up -d
 

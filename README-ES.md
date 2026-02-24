@@ -14,12 +14,12 @@ siguientes características:
 
 Temas disponibles:
 
-| Tema                  | Archivo                                  |
-| --------------------- | ---------------------------------------- |
-| Cream (light)         | `themes/assets/theme-cream.css`          |
-| Let It Snow (light)   | `themes/assets/theme-let-it-snow.css`    |
-| Black is Black (dark) | `themes/assets/theme-black-is-black.css` |
-| Purple Rain (dark)    | `themes/assets/theme-purple-rain.css`    |
+| Tema                      | Archivo                                     |
+| ------------------------- | ------------------------------------------- |
+| Black is Black (dark)     | `themes/assets/theme-black-is-black.css`    |
+| Let It Snow (light)       | `themes/assets/theme-let-it-snow.css`       |
+| Purple Rain (dark)        | `themes/assets/theme-purple-rain.css`       |
+| Tea In The Sahara (light) | `themes/assets/theme-tea-in-the-sahara.css` |
 
 Para cambiar de tema, edita el archivo `themes/adminer.css`, descomenta
 el `@import` según tu preferencia y recarga la página en el navegador.
@@ -88,9 +88,9 @@ Para acceder, en el formulario de login:
 │   └── assets/
 │       ├── fonts.css
 │       ├── theme-black-is-black.css
-│       ├── theme-cream.css
 │       ├── theme-let-it-snow.css
-│       └── theme-purple-rain.css
+│       ├── theme-purple-rain.css
+│       └── theme-tea-in-the-sahara.css
 ├── init/
 │   ├── mysql-setup.sql
 │   └── pgsql-setup.sql
@@ -108,13 +108,13 @@ Para acceder, en el formulario de login:
 ![Alter Table](schreenshots/black-is-black-alter-table.png)
 ![New Item](schreenshots/black-is-black-new-item.png)
 
-### Cream
+### Let It Snow
 
-![Login](schreenshots/cream-login.png)
-![Datatable](schreenshots/cream-datatable.png)
-![Show Structure](schreenshots/cream-show-structure.png)
-![Alter Table](schreenshots/cream-alter-table.png)
-![New Item](schreenshots/cream-new-item.png)
+![Login](schreenshots/let-it-snow-login.png)
+![Snow Patrol Datatable](schreenshots/let-it-snow-datatable.png)
+![Show Structure](schreenshots/let-it-snow-show-structure.png)
+![Alter Table](schreenshots/let-it-snow-alter-table.png)
+![New Item](schreenshots/let-it-snow-new-item.png)
 
 ### Purple Rain
 
@@ -124,10 +124,10 @@ Para acceder, en el formulario de login:
 ![Alter Table](schreenshots/purple-rain-alter-table.png)
 ![New Item](schreenshots/purple-rain-new-item.png)
 
-### Let It Snow
+### Tea In The Sahara
 
-![Login](schreenshots/let-it-snow-login.png)
-![Snow Patrol Datatable](schreenshots/let-it-snow-datatable.png)
-![Show Structure](schreenshots/let-it-snow-show-structure.png)
-![Alter Table](schreenshots/let-it-snow-alter-table.png)
-![New Item](schreenshots/let-it-snow-new-item.png)
+![Login](schreenshots/tea-in-the-sahara-login.png)
+![Datatable](schreenshots/tea-in-the-sahara-datatable.png)
+![Show Structure](schreenshots/tea-in-the-sahara-show-structure.png)
+![Alter Table](schreenshots/tea-in-the-sahara-alter-table.png)
+![New Item](schreenshots/tea-in-the-sahara-new-item.png)

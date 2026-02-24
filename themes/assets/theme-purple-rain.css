@@ -1,11 +1,11 @@
-/* feelin' blue ? */
+/* I only wanted to see you laughing in the purple rain */
 
 :root {
     --theme-bg-primary: oklch(5% 0.149 302.717);
-    --theme-text-primary: oklch(90% 0.149 302.717);
-    --theme-bg-secondary: oklch(20% 0.149 302.717);
-    --theme-text-link: oklch(75% 0.149 302.717);
-    --theme-text-accent: gold;
+    --theme-text-primary: oklch(70% 0.149 302.717);
+    --theme-bg-secondary: oklch(15% 0.149 302.717);
+    --theme-text-link: oklch(60% 0.149 302.717);
+    --theme-text-accent: goldenrod;
     --theme-bg-accent: oklch(45% 0.149 302.717);
     --theme-border: #555;
     --theme-logo-filter: grayscale(0%);
