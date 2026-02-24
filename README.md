@@ -1,73 +1,56 @@
 # Adminer DataPlay Themes
 
-Una colección de temas CSS minimalistas para Adminer configurables mediante las
-variables predefinidas en los archivos de theme importados para cambiar la
-apariencia modificando solo esas variables y facilitando la creación de nuevos
-temas.
+Una colección de temas CSS minimalistas para Adminer personalizables mediante
+variables predefinidas.
+
+Usa un tema predefinido o ajusta color y fuentes a tus gustos personales.
 
 ## Archivo principal: `adminer.css`
 
-Este es el archivo principal que configura la interfaz de Adminer con las siguientes características:
+Este es el archivo principal que configura la interfaz de Adminer  con las
+siguientes características configurables:
 
-### 1) Imports de fuentes y tema
+### Selecciona tu tema de color preferido
 
-Carga fuentes y un tema activo (Cream por defecto). Todos los temas disponibles:
+Todos los temas disponibles:
 
-| theme          | mode  | filepath                                 |
-| -------------- | ----- | ---------------------------------------- |
-| Cream          | light | `themes/assets/theme-cream.css`          |
-| Let It Snow    | light | `themes/assets/theme-let-it-snow.css`    |
-| Black is Black | dark  | `themes/assets/theme-black-is-black.css` |
-| Purple Rain    | dark  | `themes/assets/theme-purple-rain.css`    |
+| Tema                  | Archivo                                  |
+| --------------------- | ---------------------------------------- |
+| Cream (light)         | `themes/assets/theme-cream.css`          |
+| Let It Snow (light)   | `themes/assets/theme-let-it-snow.css`    |
+| Black is Black (dark) | `themes/assets/theme-black-is-black.css` |
+| Purple Rain (dark)    | `themes/assets/theme-purple-rain.css`    |
 
-### 2) Reset y variables globales
+Para cambiar el tema activo, edita el archivo `themes/adminer.css` y descomenta
+el `@import` según tu preferencia, luego recarga la página
 
-- Define `box-sizing: border-box` global
-- Usa variables CSS para colores, tipografías y bordes
-- Variables globales html para bg, fg, dim, lit
+### Configura las fuentes tipográficas
 
-### 3) Layout global
+Para usar otras fuentes tipográficas, edita `themes/assets/fonts.css` y carga
+fuentes de Google Fonts u otro proveedor, luego, configura las **variables CSS:**
 
-- **Selector de idioma (#lang)**: Posicionado absolutamente, padding específico
-- **Encabezados (h1, h2)**: Color acento, box-shadow, border-radius
-- **Version badge**: Estilo redondeado (9999px), posicionado con transform
-- **Logo (#logo)**: Filter personalizable vía variable
-- **Breadcrumb**: Margin, box-shadow, color acento
-- **Logout**: Transform y box-shadow específicos
+| Variable                          | Uso                                               |
+| --------------------------------- | ------------------------------------------------- |
+| `--theme-font-primary`            | Tipografía general de la interfaz                 |
+| `--theme-font-size-primary`       | Tamaño por defecto                                |
+| `--theme-datatable-font`          | Tipografía para datos en tablas  (inherit u otra) |
+| `--theme-datatable-font-size`     | Tamaño por defecto (inherit u otro)               |
+| `--theme-datatable-white-space`   | Configura white-space en tablas                   |
+| `--theme-datatable-overflow-wrap` | Configura overflow-wrap en tablas                 |
 
-### 4) Enlaces
 
-- Colores personalizables vía variables
-- Hover con color acento
-- Estado active con subrayado y font-weight 500
-- Text-transform: lowercase
+Puedes establecer una fuente específica, por ejemplo monospace, para los datos
+mostrados en las tablas o bien dejar `inherit` para usar la fuente primaria.
+Por defecto Adminer aplica un estilo de `white-space` de tipo `pre` a las celdas
+de datos que, a veces, dificulta la legibilidad al hacer que las filas sean
+demasiado largas y salgan de la pantalla. Las dos últimas flags sirven
+para modificar ese comportamiento (ver capturas de pantalla).
 
-### 5) Tablas
+## Inicio rápido con Docker
 
-- **Filas alternadas**: Estilos diferentes para filas impares (odd) y pares (even) usando colores primario y secundario
-- **Tipografía de datatable**:
-  - Permite usar una tipografía diferente para los datos en las tablas (comúnmente monospace)
-  - Configurable vía variables `--theme-datatable-font` y `--theme-datatable-font-size`
-- **Ajuste de white-space**:
-  - Por defecto Adminer usa `pre` para todas las columnas, dificultando la legibilidad de valores extensos
-  - La variable `--theme-datatable-whitespace` permite configurar el comportamiento según preferencia
+Si tienes Docker puedes usar las siguientes instrucciones definidas en el
+`Makefile`.
 
-### 6) Formularios
-
-- **Inputs, selects, buttons**: Estilos personalizados con colores heredados
-- **Focus**: Outline de color acento, border-color transparente
-- **Submit buttons**: Box-shadow, background secundario, hover con color acento
-- **Checkboxes y radios custom**:
-  - appearance: none
-  - SVG checkmark integrado
-  - Estados checked con background y border del color de enlace
-
-### 7) Otros elementos
-
-- Mensajes de formulario con bordes
-- Área SQL con fondo secundario y padding
-
-## Uso rápido
 
 ```bash
 # Iniciar Adminer con Docker
@@ -79,68 +62,23 @@ make down
 # Reiniciar servicios
 make restart
 
-# Reconstruir contenedores
+# Reconstruir todo - OJO: elimina volúmenes de bases de datos
 make rebuild
 ```
 
-Al iniciar con `make up`, Adminer estará disponible en `http://localhost:8080`
-y habrá dos bases de datos de muestra disponibles `test_db`, una para MySQL y
-otra para PostgreSQL.
+Al iniciar con `make up`, **Adminer** estará disponible en `http://localhost:8080`
+y habrá dos bases de datos `acme` disponibles, una en MySQL y otra para
+PostgreSQL, con un par de tablas con datos de prueba.
 
 Para acceder, en el formulario de login:
 
-- **system**: MySQL/MariaDB | PostgreSQL
-- **server**: mysql | pgsql (contenedores docker)
-- **username**: root
-- **password**: root
-- **database**: test_db (o dejar en blanco y seleccionar luego)
+- **system**: `MySQL/MariaDB` | `PostgreSQL`
+- **server**: `mysql` | `pgsql` (contenedores docker)
+- **username**: `root`
+- **password**: `root`
+- **database**: `acme` (o dejar en blanco y seleccionar luego)
 
-### Cambiar y personalizar el tema activo
-
-Para cambiar el tema activo, edita `themes/adminer.css` y descomenta el
-`@import` correspondiente al tema preferido:
-
-```css
-/* edit and set your font preferences */
-@import url('./assets/fonts.css');
-
-/* uncomment your favorite theme */
-@import url('./assets/theme-black-is-black.css');
-/* @import url('./assets/theme-cream.css'); */
-/* @import url('./assets/theme-let-it-snow.css'); */
-/* @import url('./assets/theme-purple-rain.css'); */
-```
-
-Luego recarga la página
-
-### Configurar fuentes
-
-Para usar otras fuentes tipográficas, edita `themes/assets/fonts.css` y carga
-fuentes de Google Fonts u otro proveedor.
-
-```css
-@import url("https://fonts.googleapis.com/css2?family=Tu-Fuente:wght@400;500;700&display=swap");
-```
-
-Luego, configura las **variables CSS:**
-
-| Variable                      | Descripción                                       |
-| ----------------------------- | ------------------------------------------------- |
-| `--theme-font-primary`        | Tipografía general de la interfaz                 |
-| `--theme-font-size-primary`   | Tamaño por defecto                                |
-| `--theme-datatable-font`      | Tipografía para datos en tablas  (inherit u otra) |
-| `--theme-datatable-font-size` | Tamaño por defecto (inherit u otro)               |
-
-Ejemplo de configuración:
-
-```css
-:root {
-    --theme-font-primary: 'Saira', sans-serif;
-    --theme-font-datatable: 'Sometype Mono', monospace;
-}
-```
-
-## Estructura del proyecto
+## Estructura de carpetas
 
 ```
 .
@@ -158,11 +96,6 @@ Ejemplo de configuración:
 ├── compose.yaml
 └── Makefile
 ```
-
-## Requisitos
-
-- Docker
-- Docker Compose
 
 ## Galería
 
