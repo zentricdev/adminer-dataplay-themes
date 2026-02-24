@@ -1,0 +1,31 @@
+:root {
+    --theme-bg-primary: floralwhite;
+    --theme-text-primary: #333;
+    --theme-bg-secondary: antiquewhite;
+    --theme-text-link: steelblue;
+    --theme-bg-accent: wheat;
+    --theme-text-accent: chocolate;
+    --theme-border: #ccc;
+    --theme-logo-filter: sepia(100%);
+    --theme-box-shadow:  1px 1px 1px #ccc;
+}
+
+.jush {
+    --text-color: orangered;
+    --identifier-color: fuchsia;
+    --number-color: green;
+
+    /* --text-color: orangered;
+    --bg-color: #fff;
+    --php-color: #003;
+    --string-color: lime;
+    --string-plain-color: lime;
+    --keyword-color: aqua;
+    --value-color: purple;
+    --number-color: limegreen;
+    --attribute-color: teal;
+    --js-bg-color: #f0f0ff;
+    --css-bg-color: #ffffe0;
+    --php-bg-color: #fff0f0;
+    --php-sql-bg-color: #ffbbb0; */
+}

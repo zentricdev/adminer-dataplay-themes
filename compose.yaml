@@ -1,0 +1,46 @@
+services:
+  adminer:
+    container_name: app
+    image: adminer
+    ports:
+      - "8080:8080"
+    environment:
+      ADMINER_DEFAULT_SERVER: mysql
+      ADMINER_DEFAULT_USER: root
+      ADMINER_DEFAULT_PASSWORD: root
+      ADMINER_DEFAULT_DB: test_db
+    volumes:
+      - ./themes/adminer.css:/var/www/html/adminer.css
+      - ./themes/assets:/var/www/html/assets
+    depends_on:
+      - mysql
+      - pgsql
+
+  mysql:
+    container_name: mysql
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: acme
+    volumes:
+      - mysql-data:/var/lib/mysql
+      - ./init/mysql-setup.sql:/docker-entrypoint-initdb.d/setup.sql
+    ports:
+      - "3306:3306"
+
+  pgsql:
+    container_name: pgsql
+    image: postgres:16
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: acme
+    volumes:
+      - pgsql-data:/var/lib/postgresql/data
+      - ./init/pgsql-setup.sql:/docker-entrypoint-initdb.d/setup.sql
+    ports:
+      - "5432:5432"
+
+volumes:
+  mysql-data:
+  pgsql-data:

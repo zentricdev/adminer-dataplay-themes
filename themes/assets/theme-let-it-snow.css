@@ -1,0 +1,12 @@
+:root {
+    --theme-bg-primary: #fafafa;
+    --theme-text-primary: #444;
+    --theme-bg-secondary: #f0f0f0;
+    --theme-text-link: steelblue;
+    --theme-bg-accent: antiquewhite;
+    --theme-text-accent: darkslateblue;
+    --theme-text-accent: #333;
+    --theme-border: lightgray;
+    --theme-logo-filter: grayscale(100%);
+    --theme-box-shadow: 1px 1px 1px #ccc;
+}
