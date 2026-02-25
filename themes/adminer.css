@@ -164,9 +164,15 @@ table.odds {
     tbody {
 
         td,
+        td code,
         td a:not(a.edit) {
             font-family: var(--theme-datatable-font);
             font-size: var(--theme-datatable-font-size);
+            white-space: var(--theme-datatable-white-space);
+            overflow-wrap: var(--theme-datatable-overflow-wrap);
+        }
+
+        .jush {
             white-space: var(--theme-datatable-white-space);
             overflow-wrap: var(--theme-datatable-overflow-wrap);
         }
@@ -202,8 +208,9 @@ textarea {
     background-color: var(--theme-bg-secondary);
     color: var(--theme-text-primary);
 }
+
 textarea {
-    font-family: var( --theme-datatable-font);
+    font-family: var(--theme-datatable-font);
     font-size: var(--theme-datatable-font-size);
 }
 

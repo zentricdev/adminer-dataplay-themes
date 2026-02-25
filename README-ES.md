@@ -67,7 +67,7 @@ make restart
 make rebuild
 ```
 
-Al iniciar con `make up`, **Adminer** estará disponible en `http://localhost:8080`
+Al iniciar con `make up`, **Adminer** estará disponible en `http://localhost:8888`
 y habrá dos bases de datos `acme` disponibles, una en MySQL y otra para
 PostgreSQL, con un par de tablas con datos de prueba.
 

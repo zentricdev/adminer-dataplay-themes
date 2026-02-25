@@ -58,7 +58,7 @@ make restart
 make rebuild
 ```
 
-When starting with `make up`, **Adminer** will be available at `http://localhost:8080`. The setup includes two `acme` databases (MySQL and PostgreSQL) pre-loaded with sample tables and test data.
+When starting with `make up`, **Adminer** will be available at `http://localhost:8888`. The setup includes two `acme` databases (MySQL and PostgreSQL) pre-loaded with sample tables and test data.
 
 To log in, use the following credentials in the login form:
 
